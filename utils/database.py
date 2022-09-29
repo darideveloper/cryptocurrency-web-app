@@ -13,8 +13,7 @@ def get_data ():
     
     # Get csv files in data folder
     current_folder = os.path.dirname(__file__)
-    project_folder = os.path.dirname (current_folder)
-    data_folder = os.path.join (project_folder, "data")
+    data_folder = os.path.join (current_folder, "data")
     csv_files = os.listdir (data_folder)
     
     # Loop for each csv file
