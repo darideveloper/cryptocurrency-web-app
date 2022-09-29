@@ -7,7 +7,7 @@
         <h1>Cryptocurrency App</h1>
         <p>Check the historical price of the most used cryptocurrencies, just a click away</p>
         <a href="./search" class="btn btn-primary rounded-pill m-1 btn-lg">Check prices</a>
-        <a href="#contact" class="btn btn-outline-secondary rounded-pill m-1 btn-lg">Contact us</a>
+        <a href="mailto:sample@gmail.com" class="btn btn-outline-secondary rounded-pill m-1 btn-lg">Contact us</a>
     </div>
 
     <img class="col-lg-8 col-md-6 col-sm-12 mt-4" src="{{ url_for('static', filename='imgs/hero.png')  }}"
@@ -80,4 +80,11 @@
         </button>
     </section>
 </section>
+{% endblock %}
+
+{% block js %}
+<script>
+    const current_page = "{{ current_page }}";
+</script>
+{{ super() }}
 {% endblock %}
