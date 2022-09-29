@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Search {{ current_page }}{% endblock %}
+
+{% block content %}
+<!-- Name,Symbol,Date,High,Low,Open,Close,Volume,Marketcap -->
+<section class="form-wrapper mt-5">
+    <h1 class="">Search {{ current_page.title() }}</h1>
+    <form>
+        <div class="mb-3">
+          <label for="date" class="form-label">Start date</label>
+          <input type="date" class="form-control" id="date">
+        </div>
+        <div class="mb-3">
+            <label for="date" class="form-label">End date</label>
+            <input type="date" class="form-control" id="date">
+        </div>
+        <div class="row px-3">
+            <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
+              <input type="checkbox" class="form-check-input" id="show-name" checked>
+              <label class="form-check-label" for="show-name">Name</label>
+            </div>
+            <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
+                <input type="checkbox" class="form-check-input" id="show-symbol" checked>
+                <label class="form-check-label" for="show-symbol">Symbol</label>
+            </div>
+            <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
+                <input type="checkbox" class="form-check-input" id="show-date" checked>
+                <label class="form-check-label" for="show-date">Date</label>
+            </div>
+            <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
+                <input type="checkbox" class="form-check-input" id="show-high" checked>
+                <label class="form-check-label" for="show-high">High</label>
+            </div>
+            <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
+                <input type="checkbox" class="form-check-input" id="show-low" checked>
+                <label class="form-check-label" for="show-low">Low</label>
+            </div>
+            <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
+                <input type="checkbox" class="form-check-input" id="show-open" checked>
+                <label class="form-check-label" for="show-open">Open</label>
+            </div>
+            <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
+                <input type="checkbox" class="form-check-input" id="show-close" checked>
+                <label class="form-check-label" for="show-close">Close</label>
+            </div>
+            <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
+                <input type="checkbox" class="form-check-input" id="show-volume" checked>
+                <label class="form-check-label" for="show-volume">Volume</label>
+            </div>
+            <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
+                <input type="checkbox" class="form-check-input" id="show-marketcap" checked>
+                <label class="form-check-label" for="show-marketcap">Marketcap</label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</section>
+
+
+{% endblock %}
+
+<!-- {% block js %}
+<script>
+    const current_page = "{{ current_page }}";
+</script>
+{{ super() }}
+{% endblock %} -->
