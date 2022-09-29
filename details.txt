@@ -1,0 +1,42 @@
+INSTALL
+
+The project only requires the Flask module version 2.2.2, you can install it manually or with the "requirements.txt" file.
+It also requires internet connection because it uses bootstrap for styles and google fonts.
+If you want it to work offline (with all files local), let me know so I can send you an extra.
+
+CONTENT:
+
+Inside the "routes" folder, there are the flask / python files. In the "routes/app.py" is the logic for returning the api data, and in the the "routes/home.py" is the logic for templates
+
+The "static" folder have all static files, like css, js and images.
+
+The "templates" folder have the html files, with jinja syntax for insert data from python where its required.
+
+The "utils" folder have an internal folder named "data" where there are csv files about historical prices of cryptocurrencies. This, for simulate a database. In the same folder there is the file "database.py", which allow us to read the data from the csv files.
+
+The file "app.py" in the root, its the main file of the project, who imports the "subpages" (blueprints) from the "routes" folder.
+
+Finally, the file "run.py" in the root, its just for running the app.
+You can run the app too from terminal.
+
+WORKFLOW:
+
+When you open the main page "http://127.0.0.1:5000/", the app returns the "index" html template.
+
+When you go to "127.0.0.1:5000/search/" or "127.0.0.1:5000/search/coin" (where coin can be: bitcoin, dogecoin, ethereum or monero); the app return the "search" html template, who allow to filter the data by dates, and show the results in a table.
+
+When you submit the form, javascript in the background, get the form data and make and requests to the api endpoints (127.0.0.1:5000/api/ or 127.0.0.1:5000/api/coin).
+
+At the same time, when you click the search button, a loading modal is displayed.
+
+After javascript get the data from the api, its show the information in the table and hide the modal.
+
+If you write some dates in the search form, the api who return will return only the registers who match with the dates.
+
+DATA
+
+If you want less data, you can delete some rows from the csv files inside the "utils/data" folder.
+If you want more data or another registers, just download the corresponding files from https://www.kaggle.com/datasets/sudalairajkumar/cryptocurrencypricehistory (files: bitcoin, dogecoin, ethereum or monero), copy the registers and paste inste the files of "utils/data"
+
+WARNING: If you use a lot of data (more than 100 registers per file), the api and the js will be too slow, and it can raise some error. For use this amount of data, you need a pagination system, which is more complicated.
+If you are interested in the pagination, let me know to send you and extra.

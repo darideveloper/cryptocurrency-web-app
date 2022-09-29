@@ -15,7 +15,8 @@
             <label for="date" class="form-label" name="end-date">End date</label>
             <input type="date" class="form-control" id="end-date">
         </div>
-        <button type="submit" class="btn btn-primary">Search</button>
+        <button type="submit" class="btn btn-primary rounded-pill px-4 mx-1">Search</button>
+        <button type="reset" class="btn btn-secondary rounded-pill px-4 mx-1">Reset</button>
     </form>
 </section>
 
@@ -23,7 +24,7 @@
     <h2>Results</h2>
 
     <!-- Results table -->
-    <table class="table vh-100">
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col">Name</th>
@@ -38,9 +39,8 @@
             </tr>
         </thead>
 
-        <!-- Start table empty -->
+        <!-- Start table empty rows -->
         <tbody class="table-group-divider">
-            
         </tbody>
     </table>
 
@@ -70,7 +70,6 @@
 <script>
     const current_page = "{{ current_page }}";
 </script>
-<script src="{{ url_for('static', filename='js/globals.js')  }}"></script>
 <script src="{{ url_for('static', filename='js/loading-modal.js')  }}"></script>
 <script src="{{ url_for('static', filename='js/form-search.js')  }}"></script>
 {{ super() }}

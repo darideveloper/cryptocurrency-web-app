@@ -2,4 +2,8 @@
   --bs-body-font-family: "Saira Condensed", sans-serif;
 }
 
+table {
+  min-height: 300px;
+}
+
 /*# sourceMappingURL=styles.css.map */

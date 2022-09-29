@@ -1,5 +1,10 @@
 // api endpojt
-const api_url = '/api/'
+var api_url = `/api/${current_page}`
+
+// Fix api url for all data
+if (api_url.includes("all")) {
+    api_url = "/api/"
+}
 
 // Get form
 const form = document.querySelector('form')
@@ -42,13 +47,16 @@ form.addEventListener('submit', async (e) => {
 
     // Convert response to json and wait for it
     api_data = await api_response.json()
+    console.log (api_data)
 
 
     // ------------------
     // RESULTS TABLE
     // ------------------
     
+    // Clean last results
     const tbody = document.querySelector ("tbody")
+    tbody.innerHTML = ""
 
     // insert rows
     for (row of api_data["data"]) {
@@ -67,6 +75,8 @@ form.addEventListener('submit', async (e) => {
         `
         tbody.innerHTML += row
     }
+
+    console.log (api_data)
 
 
     // ------------------

@@ -9,19 +9,11 @@ def index ():
     return render_template ("index.html", current_page="home")
 
 @blueprint_home.route ("/search/")
-def search_all ():
-    data = []
-    show = {
-        "name": True,
-        "symbol": True,
-        "date": True,
-        "high": True,
-        "low": True,
-        "open": True,
-        "close": True,
-        "volume": True,
-        "marketcap": True,
-    }
-    
+def search_all ():   
     # Return search all template
-    return render_template ("search.html", current_page="all", show=show, data=data)
+    return render_template ("search.html", current_page="all")
+
+@blueprint_home.route ("/search/<coin>")
+def search_coin (coin):   
+    # Return search all template
+    return render_template ("search.html", current_page=coin)
