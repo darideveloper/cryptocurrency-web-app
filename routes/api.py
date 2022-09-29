@@ -9,9 +9,11 @@ blueprint_api = Blueprint ('api', __name__)
 def query ():
     """ return query data from csv files  """
     
-    # read query variables
-    name = request.args.get("name")
-    date = request.args.get("date")
+    # read query variables from json
+    json_data = request.json
+    name = json_data["name"]
+    start_date = json_data["start_date"]
+    end_date = json_data["end_date"]
     
     # Get data from csv files
     data = database.get_data ()
@@ -21,7 +23,7 @@ def query ():
     # Show data
     return {
         "name": name,
-        "date": date,
-        "data": data
+        "start_date": start_date,
+        "end_date": end_date
     }
     

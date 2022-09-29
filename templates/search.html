@@ -2,53 +2,53 @@
 {% block title %}Search {{ current_page }}{% endblock %}
 
 {% block content %}
-<!-- Name,Symbol,Date,High,Low,Open,Close,Volume,Marketcap -->
+
 <section class="form-wrapper mt-5">
-    <h1 class="">Search {{ current_page.title() }}</h1>
+    <h2 class="h2">Search {{ current_page.title() }}</h2>
     <form>
         <div class="mb-3">
-          <label for="date" class="form-label">Start date</label>
-          <input type="date" class="form-control" id="date">
+            <label for="date" class="form-label" name="start-date">Start date</label>
+            <input type="date" class="form-control" id="date">
         </div>
         <div class="mb-3">
-            <label for="date" class="form-label">End date</label>
+            <label for="date" class="form-label" name="end-date">End date</label>
             <input type="date" class="form-control" id="date">
         </div>
         <div class="row px-3">
             <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
-              <input type="checkbox" class="form-check-input" id="show-name" checked>
-              <label class="form-check-label" for="show-name">Name</label>
+                <input type="checkbox" class="form-check-input" id="show-name" name="show-name" checked>
+                <label class="form-check-label" for="show-name">Name</label>
             </div>
             <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
-                <input type="checkbox" class="form-check-input" id="show-symbol" checked>
+                <input type="checkbox" class="form-check-input" id="show-symbol" name="show-symbol" checked>
                 <label class="form-check-label" for="show-symbol">Symbol</label>
             </div>
             <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
-                <input type="checkbox" class="form-check-input" id="show-date" checked>
+                <input type="checkbox" class="form-check-input" id="show-date" name="show-date" checked>
                 <label class="form-check-label" for="show-date">Date</label>
             </div>
             <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
-                <input type="checkbox" class="form-check-input" id="show-high" checked>
+                <input type="checkbox" class="form-check-input" id="show-high" name="show-high" checked>
                 <label class="form-check-label" for="show-high">High</label>
             </div>
             <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
-                <input type="checkbox" class="form-check-input" id="show-low" checked>
+                <input type="checkbox" class="form-check-input" id="show-low" name="show-low" checked>
                 <label class="form-check-label" for="show-low">Low</label>
             </div>
             <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
-                <input type="checkbox" class="form-check-input" id="show-open" checked>
+                <input type="checkbox" class="form-check-input" id="show-open" name="show-open" checked>
                 <label class="form-check-label" for="show-open">Open</label>
             </div>
             <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
-                <input type="checkbox" class="form-check-input" id="show-close" checked>
+                <input type="checkbox" class="form-check-input" id="show-close" name="show-close" checked>
                 <label class="form-check-label" for="show-close">Close</label>
             </div>
             <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
-                <input type="checkbox" class="form-check-input" id="show-volume" checked>
+                <input type="checkbox" class="form-check-input" id="show-volume" name="show-volume" checked>
                 <label class="form-check-label" for="show-volume">Volume</label>
             </div>
             <div class="mb-3 form-check col-12 col-sm-4 col-md-3 col-lg-2">
-                <input type="checkbox" class="form-check-input" id="show-marketcap" checked>
+                <input type="checkbox" class="form-check-input" id="show-marketcap" name="show-marketcap" checked>
                 <label class="form-check-label" for="show-marketcap">Marketcap</label>
             </div>
         </div>
@@ -56,12 +56,84 @@
     </form>
 </section>
 
+<section class="results mt-5">
+    <h2>Results</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                {% if show["name"] %}
+                    <th scope="col">Name</th>
+                {% endif %}
+                {% if show["symbol"] %}
+                    <th scope="col">Symbol</th>
+                {% endif %}
+                {% if show["date"] %}
+                    <th scope="col">Date</th>
+                {% endif %}
+                {% if show["high"] %}
+                    <th scope="col">High</th>
+                {% endif %}
+                {% if show["low"] %}
+                    <th scope="col">Low</th>
+                {% endif %}
+                {% if show["open"] %}
+                    <th scope="col">Open</th>
+                {% endif %}
+                {% if show["close"] %}
+                    <th scope="col">Close</th>
+                {% endif %}
+                {% if show["volume"] %}
+                    <th scope="col">Volume</th>
+                {% endif %}
+                {% if show["marketcap"] %}
+                    <th scope="col">Marketcap</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for row in data %}
+            <tr>
+                {% if show["name"] %}
+                    <th scope="col">row[1]</th>
+                {% endif %}
+                {% if show["symbol"] %}
+                    <th scope="col">row[2]</th>
+                {% endif %}
+                {% if show["date"] %}
+                    <th scope="col">row[3]</th>
+                {% endif %}
+                {% if show["high"] %}
+                    <th scope="col">row[4]</th>
+                {% endif %}
+                {% if show["low"] %}
+                    <th scope="col">row[5]</th>
+                {% endif %}
+                {% if show["open"] %}
+                    <th scope="col">row[6]</th>
+                {% endif %}
+                {% if show["close"] %}
+                    <th scope="col">row[7]</th>
+                {% endif %}
+                {% if show["volume"] %}
+                    <th scope="col">row[8]</th>
+                {% endif %}
+                {% if show["marketcap"] %}
+                    <th scope="col">row[9]</th>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
 
 {% endblock %}
 
-<!-- {% block js %}
+{% block js %}
 <script>
     const current_page = "{{ current_page }}";
 </script>
 {{ super() }}
-{% endblock %} -->
+
+<script src="{{ url_for('static', filename='ja/form-search.js')  }}"></script>
+{% endblock %}

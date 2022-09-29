@@ -36,22 +36,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-md-0 w-100 d-flex justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./search/bitcoin">Bitcoin</a>
+              <a class="nav-link" aria-current="page" href="/search/bitcoin">Bitcoin</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./search/dogecoin">Dogecoin</a>
+              <a class="nav-link" aria-current="page" href="/search/dogecoin">Dogecoin</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./search/ethereum">Ethereum</a>
+              <a class="nav-link" aria-current="page" href="/search/ethereum">Ethereum</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./search/monero">Monero</a>
+              <a class="nav-link" aria-current="page" href="/search/monero">Monero</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./search">All</a>
+              <a class="nav-link" aria-current="page" href="/search">All</a>
             </li>
           </ul>
         </div>
@@ -66,9 +66,9 @@
     <small class="text-center w-100 d-inline-block">© Cryptocurrency App 2022</small>
   </footer>
 
-  <!-- {% block js %} -->
-    <!-- <script src="{{ url_for('static', filename='js/header-links.js')  }}"></script> -->
-  <!-- {% endblock %} -->
+  {% block js %}
+    <script src="{{ url_for('static', filename='js/header-links.js')  }}"></script>
+  {% endblock %}
 </body>
 
 </html>
