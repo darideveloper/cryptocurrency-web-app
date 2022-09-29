@@ -13,11 +13,13 @@
     <img class="col-lg-8 col-md-6 col-sm-12 mt-4" src="{{ url_for('static', filename='imgs/hero.png')  }}"
         alt="hero image">
 </section>
+
 <section id="team" class="cards row">
     <h2 class="text-center mt-2">Our team</h2>
     <div class="card-wrapper col-md-4 p-lg-5 p-md-3 p-sm-5">
         <div class="card">
-            <img src="{{ url_for('static', filename='imgs/man1.png')  }}" class="card-img-top" alt="Jonathan Nash photo">
+            <img src="{{ url_for('static', filename='imgs/man1.png')  }}" class="card-img-top"
+                alt="Jonathan Nash photo">
             <div class="card-body">
                 <h5 class="card-title">Jonathan Nash</h5>
                 <p class="card-text">CEO, Investment Expert</p>
@@ -42,5 +44,40 @@
             </div>
         </div>
     </div>
+</section>
+
+<section class="carousel-wrapper">
+    <h2 class="text-center mt-2">Gallery</h2>
+    <section id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='imgs/gallery1.jpg')  }}" class="d-block w-100" alt="gallery image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='imgs/gallery2.jpg')  }}" class="d-block w-100" alt="gallery image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='imgs/gallery3.jpg')  }}" class="d-block w-100" alt="gallery image 2">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
 </section>
 {% endblock %}
