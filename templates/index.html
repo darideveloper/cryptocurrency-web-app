@@ -1,2 +1,46 @@
 {% extends "base.html" %}
 {% block title %}Hone{% endblock %}
+
+{% block content %}
+<section id="hero" class="d-flex flex-lg-justify-content-center align-items-center my-5 row">
+    <div class="info col-lg-4 col-md-6 col-sm-12 text-center">
+        <h1>Cryptocurrency App</h1>
+        <p>Check the historical price of the most used cryptocurrencies, just a click away</p>
+        <a href="./search" class="btn btn-primary rounded-pill m-1 btn-lg">Check prices</a>
+        <a href="#contact" class="btn btn-outline-secondary rounded-pill m-1 btn-lg">Contact us</a>
+    </div>
+
+    <img class="col-lg-8 col-md-6 col-sm-12 mt-4" src="{{ url_for('static', filename='imgs/hero.png')  }}"
+        alt="hero image">
+</section>
+<section id="team" class="cards row">
+    <h2 class="text-center mt-5">Our team</h2>
+    <div class="card-wrapper col-md-4 p-lg-5 p-md-3 p-sm-5">
+        <div class="card">
+            <img src="{{ url_for('static', filename='imgs/man1.png')  }}" class="card-img-top" alt="Jonathan Nash photo">
+            <div class="card-body">
+                <h5 class="card-title">Jonathan Nash</h5>
+                <p class="card-text">CEO, Investment Expert</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-wrapper col-md-4 p-lg-5 p-md-3 p-sm-5">
+        <div class="card">
+            <img src="{{ url_for('static', filename='imgs/man2.png')  }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Bernadette Johnston</h5>
+                <p class="card-text">Marketing Manager and SEO expert</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-wrapper col-md-4 p-lg-5 p-md-3 p-sm-5">
+        <div class="card">
+            <img src="{{ url_for('static', filename='imgs/women1.png')  }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Dominic Knox</h5>
+                <p class="card-text">Developer, passionate about technology</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
