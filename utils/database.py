@@ -32,4 +32,4 @@ def get_data ():
         # Save csv rows in general data variable
         data += csv_rows
     
-    return data[0]
+    return data
