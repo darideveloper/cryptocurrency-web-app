@@ -9,6 +9,13 @@ form.addEventListener('submit', async (e) => {
     // Dont submit form
     e.preventDefault()
 
+    // Show loading screen
+    show_loading ()
+
+    // ------------------
+    // API DATA
+    // ------------------
+
     // Get form data
     const start_date_elem = document.querySelector('#start-date')
     const end_date_elem = document.querySelector('#end-date')
@@ -36,16 +43,15 @@ form.addEventListener('submit', async (e) => {
     // Convert response to json and wait for it
     api_data = await api_response.json()
 
-    // Filter data to show, with pagination
-    const api_data_show = api_data["data"].slice(0,20)
 
-    // UPDATE TABLE
+    // ------------------
+    // RESULTS TABLE
+    // ------------------
     
     const tbody = document.querySelector ("tbody")
-    tbody.innerHTML = '<tbody class="table-group-divider">' // open tbody tag
 
     // insert rows
-    for (row of api_data_show) {
+    for (row of api_data["data"]) {
         row = `
         <tr>
             <td >${row[1]}</td>
@@ -62,5 +68,33 @@ form.addEventListener('submit', async (e) => {
         tbody.innerHTML += row
     }
 
-    tbody.innerHTML += '<tbody class="table-group-divider">' // open tbody tag
+
+    // ------------------
+    // PAGINATION
+    // ------------------
+
+    // const nav = document.querySelector('#pagination')
+    // const nav_ul = nav.querySelector('ul')
+
+    // // Clen paginations last content
+    // nav_ul.innerHTML = ""
+
+    // // Calculate and add pages
+    // let total_pages = Math.ceil(api_data["data"].length / 20)
+    // if (total_pages > 20) {
+    //     total_pages = 20
+    // }
+
+    // // Generate pages
+    // for (let page_num = 1; page_num <= total_pages; page_num++ ) {
+    //     // Create and save number page
+    //     const page = `<li class="page-item"><button class="page-link">${page_num}</button></li>`
+    //     nav_ul.innerHTML += page
+    // }
+
+    // // activate pagination
+    // nav.classList.remove ("d-none")
+
+    // Hide loading screen
+    hide_loading ()
 })

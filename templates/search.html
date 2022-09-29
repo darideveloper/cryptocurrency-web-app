@@ -44,7 +44,23 @@
         </tbody>
     </table>
 
-    <!-- Nav -->
+    <!-- Nav
+    <nav id="pagination" aria-label="results navigation" class="d-none">
+        <ul class="pagination">
+          <li class="page-item"><button class="page-link">Previous</button></li>
+          <li class="page-item"><button class="page-link">1</button></li>
+          <li class="page-item"><button class="page-link">2</button></li>
+          <li class="page-item"><button class="page-link">3</button></li>
+          <li class="page-item"><button class="page-link">Next</button></li>
+        </ul>
+      </nav> -->
+
+      <!-- Loading screen -->
+      <div class="loading vw-100 vh-100 d-flex align-items-center justify-content-center position-fixed top-0 start-0 bg-light d-none"  style="--bs-bg-opacity: .5;">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
 </section>
 
 
@@ -53,9 +69,9 @@
 {% block js %}
 <script>
     const current_page = "{{ current_page }}";
-
 </script>
-{{ super() }}
-
+<script src="{{ url_for('static', filename='js/globals.js')  }}"></script>
+<script src="{{ url_for('static', filename='js/loading-modal.js')  }}"></script>
 <script src="{{ url_for('static', filename='js/form-search.js')  }}"></script>
+{{ super() }}
 {% endblock %}
