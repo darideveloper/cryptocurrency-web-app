@@ -27,7 +27,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/darideveloper/cryptocurrency-web-app">
-    <img src="static/imgs/logo.png" alt="Logo" height="80">
+    <img src="./static/imgs/logo.png" alt="Logo" height="80">
   </a>
 
   <h3 align="center">Cryptocurrency Web App
