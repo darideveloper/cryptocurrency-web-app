@@ -37,7 +37,7 @@ Public</h3>
     Small flask app with Bootstrap
     <br />
     <br />
-    <a href="https://cryptocurrency-web-app.onrender.com">View Demo</a>
+    <a href="http://flask.eba-a87hfufr.us-east-2.elasticbeanstalk.com/">View Demo</a>
     ·
     <a href="https://github.com/darideveloper/cryptocurrency-web-app/issues">Report Bug</a>
     ·
