@@ -11,15 +11,11 @@
 
 
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![Fiverr][fiverr-shield]][fiverr-url]
+[![Gmail][gmail-shield]][gmail-url]
+
 
 
 
@@ -80,15 +76,9 @@ Public</h3>
 
 Flask app with Bootstrap in the frontend, who have a home page, and search pages for show cryptocurrencies historical prices, using local csv files for simalate a database.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ### Built With
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a href="https://getbootstrap.com/">
   <img src="https://cdn.svgporn.com/logos/bootstrap.svg" width="60" alt="bootstrap" title="bootstrap">
@@ -121,8 +111,6 @@ You can install in local, just cloning the repo and installing the modules
    python -m run.py
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -142,15 +130,11 @@ You can install in local, just cloning the repo and installing the modules
 
 See the [open issues](https://github.com/darideveloper/cryptocurrency-web-app/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -160,8 +144,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 Your Name - darideveloper@gmail.com
 
 Project Link: [https://github.com/darideveloper/cryptocurrency-web-app](https://github.com/darideveloper/cryptocurrency-web-app)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -194,3 +176,9 @@ Project Link: [https://github.com/darideveloper/cryptocurrency-web-app](https://
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[gmail-shield]: https://img.shields.io/badge/-gmail-black.svg?style=for-the-badge&logo=gmail&colorB=555&logoColor=white
+[fiverr-shield]: https://img.shields.io/badge/-fiverr-black.svg?style=for-the-badge&logo=fiverr&colorB=555&logoColor=white
+[gmail-url]: mailto:darideveloper@gmail.com
+[fiverr-url]: https://www.fiverr.com/darideveloper
+
+<span>Last code update: <time datetime="2022-10-04" class="last-update">2022-10-04</time>
