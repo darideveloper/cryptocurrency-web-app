@@ -141,7 +141,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - darideveloper@gmail.com
+Dari Developer - darideveloper@gmail.com
 
 Project Link: [https://github.com/darideveloper/cryptocurrency-web-app](https://github.com/darideveloper/cryptocurrency-web-app)
 
